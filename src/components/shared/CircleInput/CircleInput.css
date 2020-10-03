@@ -1,0 +1,60 @@
+
+
+div {
+    --radius:20pt;
+    --border-width:1pt;
+    --input-size: calc(2 * (var(--radius) - var(--border-width)));
+    --input-font-size: calc(0.75* var(--radius));
+    --title-font-size: calc(0.5* var(--radius));
+    --text-align: center;
+
+    border-radius: 50%;
+
+    height: var(--input-size);
+    width: var(--input-size);
+    color:black;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+input {
+    border-width: var(--border-width);
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    text-align: var(--text-align);
+    margin: 0;
+    height: var(--input-size);
+    width: var(--input-size);
+    background-color: transparent;
+    display: inline-block;
+    float: left;
+    z-index: 2;
+    position: absolute;
+    box-sizing: border-box;
+    font-size: var(--input-font-size);
+}
+
+input:focus {
+    border-color: var(--mdc-theme-secondary);
+    outline: none;
+}
+
+span {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-style: none;
+    margin: 0;
+    line-height: var(--input-size);
+    width:  var(--input-size);
+    position: absolute;
+    display: inline-block;
+    float: left;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    vertical-align: center;
+    color: #ccc;
+    font-size: var(--title-font-size);
+}

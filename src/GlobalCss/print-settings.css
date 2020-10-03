@@ -1,0 +1,48 @@
+@media print {
+
+    /* hide the spinners when printing. */
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+
+
+    .noprint {
+        display: none !important;
+    }
+    .printme {
+        display: block !important;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .noprint {
+        display: none !important;
+        margin:0 !important;
+        padding:0 !important;
+        box-sizing: border-box !important;
+    }
+
+}
+
+@page {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.printme {
+    display: none;
+}

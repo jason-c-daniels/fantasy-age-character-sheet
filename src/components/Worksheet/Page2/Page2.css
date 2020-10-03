@@ -1,0 +1,37 @@
+.abilities {
+    float: left;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+    width: 16.75rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.armor-move-and-health {
+    display: flex;
+    border: 1pt black solid;
+    box-sizing: border-box;
+    border-bottom-right-radius: 1.8rem;
+}
+
+.content {
+    padding:0.25rem;
+    box-sizing: border-box;
+}
+
+.content-middle {
+    border-left: 1pt black solid;
+    border-right: 1pt black solid;
+    padding: 0.25rem;
+}
+
+input.input-row {
+    border:none;
+    border-bottom: 1pt black solid;
+    width:100%;
+}
+.weapons {
+    border: 1pt black solid;
+    border-top: none;
+    padding-bottom:0.66rem;
+}

@@ -1,0 +1,47 @@
+.ability-title {
+    background-color: black;
+    color:white;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+[type=checkbox] {
+    margin-left: 2pt;
+    margin-top: 2pt;
+}
+
+.container {
+    display: inline-flex;
+    flex: auto;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+    width: 16.75rem;
+}
+
+[type=number]{
+    --x:2.75rem;
+    height:var(--x);
+    width:var(--x);
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-color:black;
+    border-width: 1pt;
+    border-left-width: 0;
+    text-align: center;
+}
+
+textarea {
+    font-size: 0.8rem;
+    --x:2.75rem;
+    height:var(--x);
+    resize: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-color:black;
+    border-width: 1pt;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+}
