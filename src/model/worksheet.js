@@ -1,25 +1,29 @@
 export default function getNewWorksheet() {
     return {
         name: "",
+        health:null,
+        healthNotes1:"",
+        healthNotes2:"",
         race:"",
         class:"",
-        level:1,
-        exp:0,
-        move:0,
-        speed:0,
-        charge:0,
-        run:0,
+        level:null,
+        exp:null,
+        move:null,
+        speed:null,
+        charge:null,
+        run:null,
         background:"",
         socialClass:"",
         powersTalentsAndSpecializations:"",
+        goalsAndTies:"",
         equipment:"",
         spells:[],
         armor:{
             type:"",
-            rating:0,
-            penalty:0,
-            defense:0
+            rating:null,
+            penalty:null
         },
+        defense:null,
         weapons:[
             {},
             {},
@@ -33,16 +37,21 @@ export default function getNewWorksheet() {
             {},
         ],
         abilities:{
-            accuracy:{name:"Accuracy", primary:false,value:0,focuses:""},
-            communication:{name:"Communication", primary:false,value:0,focuses:""},
-            constitution:{name:"Constitution", primary:false,value:0,focuses:""},
-            dexterity:{name:"Dexterity", primary:false,value:0,focuses:""},
-            fighting:{name:"Fighting", primary:false,value:0,focuses:""},
-            intelligence:{name:"Intelligence", primary:false,value:0,focuses:""},
-            perception:{name:"Perception", primary:false,value:0,focuses:""},
-            strength:{name:"Strength", primary:false,value:0,focuses:""},
-            willpower:{name:"Willpower", primary:false,value:0,focuses:""}
-        }
+            accuracy:{name:"Accuracy", primary:false,value:null,focuses:""},
+            communication:{name:"Communication", primary:false,value:null,focuses:""},
+            constitution:{name:"Constitution", primary:false,value:null,focuses:""},
+            dexterity:{name:"Dexterity", primary:false,value:null,focuses:""},
+            fighting:{name:"Fighting", primary:false,value:null,focuses:""},
+            intelligence:{name:"Intelligence", primary:false,value:null,focuses:""},
+            perception:{name:"Perception", primary:false,value:null,focuses:""},
+            strength:{name:"Strength", primary:false,value:null,focuses:""},
+            willpower:{name:"Willpower", primary:false,value:null,focuses:""}
+        },
+        spellPoints:null,
+        spellPower:null,
+        gold:null,
+        silver:null,
+        copper:null
 
 
     };

@@ -3,7 +3,6 @@
 </style>
 
 <script>
-    import CircleInput from "../../../shared/CircleInput";
     export let ability={primary:false,name:"name",value:0, focuses:""}
 </script>
 

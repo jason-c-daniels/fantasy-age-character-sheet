@@ -19,7 +19,7 @@
 </script>
 
 <div class="page">
-    <LogoBar/>
+    <LogoBar bind:worksheet={worksheet}/>
     <div class="flex-row">
     <div class="abilities">
         {#if !!worksheet && !!worksheet.abilities}
@@ -38,38 +38,38 @@
         <div class="armor-move-and-health flex-row">
             <Section title="Armor & Defense" width="12em" props={{style:"flex-grow:2;flex-shrink:2"}} >
                 <div class="flex-column content">
-                    <SimpleTextField title="Type" />
-                    <SimpleNumberField title="Rating (AR)" />
-                    <SimpleNumberField title="Penalty (AP)" />
-                    <SimpleNumberField title="Defense" hint="10 + Dex + Shield Bonus" />
+                    <SimpleTextField title="Type" bind:value={worksheet.armor.type}/>
+                    <SimpleNumberField title="Rating (AR)" bind:value={worksheet.armor.rating}/>
+                    <SimpleNumberField title="Penalty (AP)" bind:value={worksheet.armor.penalty} />
+                    <SimpleNumberField title="Defense" hint="10 + Dex + Shield Bonus" bind:value={worksheet.defense} />
                 </div>
             </Section>
             <Section title="Movement" props={{style:"flex-grow:2;flex-shrink:2"}}>
                 <div class="flex-column content-middle"style="height: 100%">
-                    <SimpleNumberField title="Speed"  />
-                    <SimpleNumberField title="Move" hint="Speed - AP"  />
-                    <SimpleNumberField title="Charge" hint="1/2 x Move"  />
-                    <SimpleNumberField title="Run" hint="2 x Move" />
+                    <SimpleNumberField title="Speed"  bind:value={worksheet.speed} />
+                    <SimpleNumberField title="Move" hint="Speed - AP"  bind:value={worksheet.move} />
+                    <SimpleNumberField title="Charge" hint="1/2 x Move" bind:value={worksheet.charge} />
+                    <SimpleNumberField title="Run" hint="2 x Move" bind:value={worksheet.run}/>
                 </div>
             </Section>
             <Section title="Health" props={{style:"flex-grow:1;flex-shrink:0; width:8rem"}}>
-                <textarea style="width:100%;resize: none;height:2.9rem;border: none; overflow: hidden" rows="3"/>
-                <textarea style="width:60%;resize: none;height:2.8rem;border: none; overflow: hidden" rows="3"/>
+                <textarea style="width:100%;resize: none;height:2.9rem;border: none; overflow: hidden" rows="3" bind:value={worksheet.healthNotes1}/>
+                <textarea style="width:60%;resize: none;height:2.8rem;border: none; overflow: hidden" rows="3" bind:value={worksheet.healthNotes2}/>
                 <div class="points" style="float: right;margin-right:-0.08rem;margin-bottom:-0.08rem;z-index: 1">
-                    <CircleInput title="Max"/>
+                    <CircleInput title="Max" bind:value={worksheet.health}/>
                 </div>
             </Section>
         </div>
         <div class="flex-row">
         <Section title="Powers, Talents, and Specializations" props={{style:"margin-top:0.3rem;flex-grow:5;flex-shrink:0"}}>
-            <textarea style="border-top:none;border-color:black;border-width:1pt; resize: none; width:100%" rows="15"></textarea>
+            <textarea style="border-top:none;border-color:black;border-width:1pt; resize: none; width:100%" rows="15" bind:value={worksheet.powersTalentsAndSpecializations} />
         </Section>
             <Section title="Goals & Ties" props={{style:"margin-top:0.3rem;flex-grow:1;flex-shrink:3;width:25%"}}>
-                <textarea style="border-top:none;border-left: none;border-color:black;border-width:1pt; resize: none; width:100%" rows="15"></textarea>
+                <textarea style="border-top:none;border-left: none;border-color:black;border-width:1pt; resize: none; width:100%" rows="15" bind:value={worksheet.goalsAndTies} />
             </Section>
         </div>
         <div class="flex-row weapons">
-            <Section title="Weapon"props={{style:"flex-grow:3;flex-shrink:1"}}>
+            <Section title="Weapon" props={{style:"flex-grow:3;flex-shrink:1"}}>
                 <div class="flex-column" style="padding-left:0.3rem">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">
@@ -82,7 +82,7 @@
                     <input type="text" class="input-row">
                 </div>
             </Section>
-            <Section title="Attack Roll"props={{style:"flex-grow:1;flex-shrink:3"}}>
+            <Section title="Attack Roll" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">
@@ -95,7 +95,7 @@
                     <input type="text" class="input-row">
                 </div>
             </Section>
-            <Section title="Damage"props={{style:"flex-grow:1;flex-shrink:3"}}>
+            <Section title="Damage" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">
@@ -108,7 +108,7 @@
                     <input type="text" class="input-row">
                 </div>
             </Section>
-            <Section title="Short Range"props={{style:"flex-grow:2;flex-shrink:3"}}>
+            <Section title="Short Range" props={{style:"flex-grow:2;flex-shrink:3"}}>
                 <div class="flex-column">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">
@@ -121,7 +121,7 @@
                     <input type="text" class="input-row">
                 </div>
             </Section>
-            <Section title="Long Range"props={{style:"flex-grow:2;flex-shrink:3"}}>
+            <Section title="Long Range" props={{style:"flex-grow:2;flex-shrink:3"}}>
                 <div class="flex-column">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">
@@ -134,7 +134,7 @@
                     <input type="text" class="input-row">
                 </div>
             </Section>
-            <Section title="Reload Time"props={{style:"flex-grow:1;flex-shrink:3"}}>
+            <Section title="Reload Time" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column" style="padding-right:0.3rem">
                     <input type="text" class="input-row">
                     <input type="text" class="input-row">

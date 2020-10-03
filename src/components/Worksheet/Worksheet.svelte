@@ -5,5 +5,5 @@
     export let worksheet=getNewWorksheet()
 </script>
 
-<Page1 worksheet={worksheet} />
-<Page2 worksheet={worksheet} />
+<Page1 bind:worksheet={worksheet} />
+<Page2 bind:worksheet={worksheet} />
