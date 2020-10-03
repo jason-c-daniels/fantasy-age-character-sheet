@@ -1,0 +1,41 @@
+
+input {
+    border: none;
+    flex-shrink: 1;
+    flex-grow: 1;
+    width:100%;
+    text-align: right;
+}
+
+.container {
+    box-sizing: border-box;
+    flex: border-box;
+    flex-direction: column;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.5pt;
+    padding: 0;
+    margin:0;
+    display: inline-flex;
+    margin-bottom: 0.2rem;
+    height: 2.4rem;
+}
+
+.field-title {
+    display: block;
+    width: 100%;
+    border: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin:0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    height:100%;
+}

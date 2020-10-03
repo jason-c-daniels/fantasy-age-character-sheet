@@ -13,6 +13,6 @@
     </div>
     <div class="input-area">
         <textarea bind:value={ability.focuses} style="float: left;" rows="3"/>
-        <input bind:value={ability.value} type="number" min="0" style="float: left;"/>
+        <input bind:value={ability.value} type="number" min="-3" style="float: left;"/>
     </div>
 </div>

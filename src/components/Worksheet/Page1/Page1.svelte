@@ -15,7 +15,6 @@
 
     export let worksheet = getNewWorksheet();
 
-
 </script>
 
 <div class="page">
@@ -38,7 +37,7 @@
         <div class="armor-move-and-health flex-row">
             <Section title="Armor & Defense" width="12em" props={{style:"flex-grow:2;flex-shrink:2"}} >
                 <div class="flex-column content">
-                    <SimpleTextField title="Type" bind:value={worksheet.armor.type}/>
+                    <SimpleTextField title="Armor Type" bind:value={worksheet.armor.type}/>
                     <SimpleNumberField title="Rating (AR)" bind:value={worksheet.armor.rating}/>
                     <SimpleNumberField title="Penalty (AP)" bind:value={worksheet.armor.penalty} />
                     <SimpleNumberField title="Defense" hint="10 + Dex + Shield Bonus" bind:value={worksheet.defense} />
@@ -71,80 +70,44 @@
         <div class="flex-row weapons">
             <Section title="Weapon" props={{style:"flex-grow:3;flex-shrink:1"}}>
                 <div class="flex-column" style="padding-left:0.3rem">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.name}>
+                    {/each}
                 </div>
             </Section>
             <Section title="Attack Roll" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.attackRoll}>
+                    {/each}
                 </div>
             </Section>
             <Section title="Damage" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.damage}>
+                    {/each}
                 </div>
             </Section>
             <Section title="Short Range" props={{style:"flex-grow:2;flex-shrink:3"}}>
                 <div class="flex-column">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.shortRange}>
+                    {/each}
                 </div>
             </Section>
             <Section title="Long Range" props={{style:"flex-grow:2;flex-shrink:3"}}>
                 <div class="flex-column">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.longRange}>
+                    {/each}
                 </div>
             </Section>
             <Section title="Reload Time" props={{style:"flex-grow:1;flex-shrink:3"}}>
                 <div class="flex-column" style="padding-right:0.3rem">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
-                    <input type="text" class="input-row">
+                    {#each worksheet.weapons as weapon}
+                        <input type="text" class="input-row" bind:value={weapon.reloadTime}>
+                    {/each}
                 </div>
             </Section>
         </div>

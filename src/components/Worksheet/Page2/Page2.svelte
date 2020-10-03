@@ -14,7 +14,6 @@
 
     export let worksheet = getNewWorksheet();
 
-
 </script>
 
 <div class="page">
@@ -22,154 +21,44 @@
     <div class="flex-row" >
         <div class="spells">
             <h2>Spells</h2>
-            <div class="flex-row" style="margin-bottom: 1rem">
+            <div class="flex-row" style="margin-bottom: 0.5rem;margin-top:0.5rem;">
                 <CircleInput title="SP" bind:value={worksheet.spellPoints}/>
                 <CircleInput title="Power" bind:value={worksheet.spellPower} props={{style:"margin-left:13rem"}}/>
             </div>
             <div class="flex-row spell-list">
                 <Section title="Name" props={{style:"width:15rem;flex-grow:0"}}>
                     <div class="flex-column" style="padding-left:0.3rem">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
+                        {#each worksheet.spells as spell}
+                            <input type="text" class="input-row" bind:value={spell.name}>
+                        {/each}
                     </div>
                 </Section>
                 <Section title="TN" props={{style:"width:5rem"}}>
                     <div class="flex-column">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
+                        {#each worksheet.spells as spell}
+                            <input type="text" class="input-row" bind:value={spell.targetNumber}>
+                        {/each}
                     </div>
                 </Section>
                 <Section title="MP" props={{style:"width:5rem"}}>
                     <div class="flex-column">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
+                        {#each worksheet.spells as spell}
+                            <input type="text" class="input-row" bind:value={spell.magicPoints}>
+                        {/each}
                     </div>
                 </Section>
                 <Section title="Time" props={{style:"width:6.5rem"}}>
                     <div class="flex-column">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
+                        {#each worksheet.spells as spell}
+                            <input type="text" class="input-row" bind:value={spell.castingTime}>
+                        {/each}
                     </div>
                 </Section>
                 <Section title="Test/Notes" props={{style:"flex-grow:3;flex-shrink:1"}}>
                     <div class="flex-column" style="padding-right:0.3rem">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
-                        <input type="text" class="input-row">
+                        {#each worksheet.spells as spell}
+                            <input type="text" class="input-row" bind:value={spell.testOrNotes}>
+                        {/each}
                     </div>
                 </Section>
             </div>
@@ -177,7 +66,7 @@
         <div style="width:0.3rem;flex-shrink: 0; flex-grow: 0"></div>
         <div class="money-and-equipment" style="flex-grow:0;flex-shrink:0;">
             <h2>Money and Equipment</h2>
-            <div class="flex-row" style="margin-bottom: 1rem">
+            <div class="flex-row" style="margin-bottom: 0.5rem;margin-top:0.5rem;">
                 <CircleInput title="Gold" bind:value={worksheet.gold}/>
                 <CircleInput title="Silver" bind:value={worksheet.silver} props={{style:"margin-left:3rem"}}/>
                 <CircleInput title="Copper" bind:value={worksheet.copper} props={{style:"margin-left:3rem"}}/>

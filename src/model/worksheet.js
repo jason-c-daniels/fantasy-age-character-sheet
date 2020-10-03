@@ -7,7 +7,7 @@ export default function getNewWorksheet() {
         race:"",
         class:"",
         level:null,
-        exp:null,
+        experiencePoints:null,
         move:null,
         speed:null,
         charge:null,
@@ -17,25 +17,27 @@ export default function getNewWorksheet() {
         powersTalentsAndSpecializations:"",
         goalsAndTies:"",
         equipment:"",
-        spells:[],
+        spells:makeClones(25,{
+            name:"",
+            targetNumber:"",
+            magicPoints:"",
+            castingTime:"",
+            testOrNotes:""
+        }),
         armor:{
             type:"",
             rating:null,
             penalty:null
         },
         defense:null,
-        weapons:[
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-        ],
+        weapons:makeClones(9,{
+            name:"",
+            attackRoll:"",
+            damage:"",
+            shortRange:"",
+            longRange:"",
+            reloadTime:""
+        }),
         abilities:{
             accuracy:{name:"Accuracy", primary:false,value:null,focuses:""},
             communication:{name:"Communication", primary:false,value:null,focuses:""},
@@ -57,6 +59,13 @@ export default function getNewWorksheet() {
     };
 }
 
+function makeClones(n,obj){
+    let result=[];
+    for (let i =0; i< n; i++) {
+        result.push({...obj});
+    }
+    return result;
+}
 
 export function validateWorksheet(worksheet) {
     let result = true;
