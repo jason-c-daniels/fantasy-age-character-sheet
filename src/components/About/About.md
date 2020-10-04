@@ -29,18 +29,20 @@ SOFTWARE.
 
 The page layout and other original creative content are licensed separately under the
 [Creative Commons Attribution 3.0 Unported license](http://creativecommons.org/licenses/by/3.0/).
+(i.e. you can make a knockoff of this page, from scratch or remix this code, so long as you give 
+me credit according to the terms of CC-BY 3.0.)
 
 ------------------------------------------------------------------------------
 
 # 3rd Party Licensing and Attribution
 
-## ??
+## Fantasy AGE RPG
 
-This work is based on Fantasy AGE (found at http://www.greenronin.com/), a 
-product of Green Ronin Publications, LLC, developed, authored, and edited by:
+Fantasy AGE RPG (found at https://greenroninstore.com/collections/fantasy-age), is owned and published by Green Ronin Publishing.
 
-Explicit permission to publish this character sheet application was granted on
-[date goes here] by [name of person at Green Ronin], [Title Signifying Their Authority to do so]
+The Fantasy AGE Logo is property of Green Ronin and is used with permission. It is NOT covered under CC-BY 3.0. 
+(i.e. You should get individual permission from Green Ronin if you want to make a derived 
+product that uses it.)
 
 ------------------------------------------------------------------------------
 

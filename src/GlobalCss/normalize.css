@@ -20,6 +20,7 @@
 html {
     line-height: var(--default-line-height); /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    font-family: "Gothic A1", sans-serif;
 }
 
 /* Sections

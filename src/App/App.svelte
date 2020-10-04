@@ -67,7 +67,7 @@
     function handleSaveWorksheetClicked() {
         let blob = new Blob([JSON.stringify(worksheet, null, 2)], {type: 'text/plain;charset=utf-8'});
         ls.save(suffix,worksheet);
-        showSnackBar('Worksheet saved to local storage.');
+        showSnackBar('Character sheet saved to local storage.');
         if (saveAlsoDownloads) {
             setTimeout(() => {
                 let fileName = `${worksheet.name}.${file_ext}`;
@@ -85,7 +85,7 @@
     function handleNewWorksheetClicked() {
         worksheet = getNewWorksheet();
         activeIndex = 0;
-        showSnackBar('Created a new worksheet.');
+        showSnackBar('Created a new character sheet.');
     }
 
     function handleFilesSelect(e) {
@@ -97,7 +97,7 @@
                 let text = e.target.result;
                 let tempWorksheet = JSON.parse(text);
                 if (validateWorksheet(tempWorksheet)) {
-                    setTimeout(() => showSnackBar("Worksheet loaded."), 250);
+                    setTimeout(() => showSnackBar("Character sheet loaded."), 250);
                     worksheet = tempWorksheet;
                     activeIndex = 0;
                 }
@@ -144,7 +144,7 @@
 </style>
 
 <svelte:head>
-    <title>{app_name}</title>
+    <title>{ !!worksheet.name ? worksheet.name+" - " : ""} {app_name}</title>
 
     <!-- Your application must load the Roboto and Material Icons fonts. -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
@@ -158,7 +158,7 @@
         <div slot="title"><span>{app_name}</span></div>
         <mwc-tab-bar slot="actionItems" style="display: inline-block" bind:this={tabBarElement}
                      activeIndex={activeIndex} on:MDCTabBar:activated={handleTabActivated}>
-            <mwc-tab label="Worksheet"></mwc-tab>
+            <mwc-tab label="Character Sheet"></mwc-tab>
             <mwc-tab label="About"></mwc-tab>
         </mwc-tab-bar>
         <mwc-icon-button icon="note_add" slot="actionItems" on:click={handleNewWorksheetClicked}
