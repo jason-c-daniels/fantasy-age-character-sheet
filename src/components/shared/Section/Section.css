@@ -19,18 +19,16 @@
     overflow: hidden;
     padding-top: 0;
     text-transform: uppercase;
-    margin-bottom: 0rem;
-
 }
 
 .header span {
     box-sizing: border-box;
-    display: block;
+    display: inline-block;
     height: var(--header-span-height);
+    line-height: var(--header-span-height);
     width: 100%;
     font-weight: 900;
-    margin-bottom: 0.3rem;
-    margin-top: -0.1rem;
+
 }
 
 .hint {

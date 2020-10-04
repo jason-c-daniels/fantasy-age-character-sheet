@@ -12,7 +12,9 @@
 
 <div class="section" {...props}>
     <div class="header" style="padding-left:0.1in">
-        <span >{title}</span>
+        <slot name="title">
+            <span>{title}</span>
+        </slot>
     </div>
     <div class="content" style="padding-left:{indent}">
         {#if (!!hint)}

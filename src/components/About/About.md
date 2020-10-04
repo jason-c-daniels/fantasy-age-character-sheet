@@ -4,7 +4,7 @@
 
 ## MIT License (Source Code)
 
-Copyright (c) 2020 [YOUR NAME HERE]
+Copyright (c) 2020 Jason C. Daniels
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,13 +34,13 @@ The page layout and other original creative content are licensed separately unde
 
 # 3rd Party Licensing and Attribution
 
-## CC-BY 3.0
+## ??
 
-This work is based on Fate Core (found at http://www.faterpg.com/), a 
-product of Evil Hat Productions, LLC, developed, authored, and edited by 
-PK Sullivan, Lara Turner, Leonard Balsera, Fred Hicks, Richard Bellingham, 
-Robert Hanz, Ryan Macklin, and Sophie Lagacé, and licensed for our use under 
-the [Creative Commons Attribution 3.0 Unported license](http://creativecommons.org/licenses/by/3.0/).
+This work is based on Fantasy AGE (found at http://www.greenronin.com/), a 
+product of Green Ronin Publications, LLC, developed, authored, and edited by:
+
+Explicit permission to publish this character sheet application was granted on
+[date goes here] by [name of person at Green Ronin], [Title Signifying Their Authority to do so]
 
 ------------------------------------------------------------------------------
 

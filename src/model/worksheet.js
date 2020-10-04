@@ -49,7 +49,7 @@ export default function getNewWorksheet() {
             strength:{name:"Strength", primary:false,value:null,focuses:""},
             willpower:{name:"Willpower", primary:false,value:null,focuses:""}
         },
-        spellPoints:null,
+        magicPoints:null,
         spellPower:null,
         gold:null,
         silver:null,

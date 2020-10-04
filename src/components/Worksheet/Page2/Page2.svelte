@@ -18,48 +18,33 @@
 
 <div class="page">
     <LogoBar bind:worksheet={worksheet}/>
-    <div class="flex-row" >
+    <div class="flex-row">
         <div class="spells">
             <h2>Spells</h2>
             <div class="flex-row" style="margin-bottom: 0.5rem;margin-top:0.5rem;">
-                <CircleInput title="SP" bind:value={worksheet.spellPoints}/>
+                <CircleInput title="MP" bind:value={worksheet.magicPoints}/>
                 <CircleInput title="Power" bind:value={worksheet.spellPower} props={{style:"margin-left:13rem"}}/>
             </div>
             <div class="flex-row spell-list">
-                <Section title="Name" props={{style:"width:15rem;flex-grow:0"}}>
-                    <div class="flex-column" style="padding-left:0.3rem">
-                        {#each worksheet.spells as spell}
+                <Section props={{style:"width:100%"}}>
+                    <div class="flex-row spells-header" slot="title">
+                        <span>Name</span>
+                        <span>TN</span>
+                        <span>MP</span>
+                        <span>Time</span>
+                        <span>Test/Notes</span>
+                    </div>
+
+                    {#each worksheet.spells as spell}
+                        <div class="flex-row data">
                             <input type="text" class="input-row" bind:value={spell.name}>
-                        {/each}
-                    </div>
-                </Section>
-                <Section title="TN" props={{style:"width:5rem"}}>
-                    <div class="flex-column">
-                        {#each worksheet.spells as spell}
                             <input type="text" class="input-row" bind:value={spell.targetNumber}>
-                        {/each}
-                    </div>
-                </Section>
-                <Section title="MP" props={{style:"width:5rem"}}>
-                    <div class="flex-column">
-                        {#each worksheet.spells as spell}
                             <input type="text" class="input-row" bind:value={spell.magicPoints}>
-                        {/each}
-                    </div>
-                </Section>
-                <Section title="Time" props={{style:"width:6.5rem"}}>
-                    <div class="flex-column">
-                        {#each worksheet.spells as spell}
                             <input type="text" class="input-row" bind:value={spell.castingTime}>
-                        {/each}
-                    </div>
-                </Section>
-                <Section title="Test/Notes" props={{style:"flex-grow:3;flex-shrink:1"}}>
-                    <div class="flex-column" style="padding-right:0.3rem">
-                        {#each worksheet.spells as spell}
                             <input type="text" class="input-row" bind:value={spell.testOrNotes}>
-                        {/each}
-                    </div>
+                        </div>
+                    {/each}
+
                 </Section>
             </div>
         </div>
